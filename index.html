@@ -14,10 +14,10 @@
             color: #333;
             line-height: 1.8;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
         }
 
-        /* Sidebar */
+        /* Sidebar for desktop */
         .sidebar {
             width: 300px;
             background: #f4ede4;
@@ -144,6 +144,54 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+                padding: 20px 10px;
+            }
+
+            .sidebar img {
+                width: 50%;
+            }
+
+            .content-wrapper {
+                margin-left: 0;
+                padding: 20px 10px;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            .resume-button {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar img {
+                width: 60%;
+            }
+
+            .sidebar h1 {
+                font-size: 1.5rem;
+            }
+
+            .resume-button {
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+
+            section h2 {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 
@@ -176,17 +224,7 @@
                     <li><strong>Bachelor in Computer Science</strong>, University of Kansas (2019 – 2023)</li>
                 </ul>
             </section>
-
-            <section>
-                <h2>Research Interests</h2>
-                <ul>
-                    <li>Security in AI/ML: Adversarial Machine Learning, Generative AI Security, Privacy-preserving
-                        Machine Learning</li>
-                    <li>Responsible AI: AI Misinformation and Misusage, Usable Security of AI Systems</li>
-                    <li>Advancing AI Applications: Improving Generative Models, Developing Multimodal AI Systems</li>
-                </ul>
-            </section>
-
+            
             <section>
                 <h2>Publications</h2>
                 <ul>
@@ -194,6 +232,16 @@
                         <em>"The Adversarial AI-Art: Understanding, Generation, Detection, and Benchmarking."</em>
                         In European Symposium on Research in Computer Security (ESORICS), 2024. (Acceptance rate: 16%)
                     </li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Research Interests</h2>
+                <ul>
+                    <li>Security in AI/ML: Adversarial Machine Learning, Generative AI Security, Privacy-preserving
+                        Machine Learning</li>
+                    <li>Responsible AI: AI Misinformation and Misusage, Usable Security of AI Systems</li>
+                    <li>Advancing AI Applications: Improving Generative Models, Developing Multimodal AI Systems</li>
                 </ul>
             </section>
 
