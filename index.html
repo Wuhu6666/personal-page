@@ -35,6 +35,7 @@
 
         .sidebar img {
             width: 80%;
+            /* 默认宽度适合桌面端 */
             height: auto;
             border-radius: 10px;
             margin-bottom: 15px;
@@ -157,6 +158,8 @@
 
             .sidebar img {
                 width: 50%;
+                /* 调整为适合平板的大小 */
+                margin: 0 auto;
             }
 
             .content-wrapper {
@@ -176,20 +179,30 @@
 
         @media (max-width: 480px) {
             .sidebar img {
-                width: 60%;
+                width: 40%;
+                /* 为超小屏设备缩小图片 */
+                margin: 0 auto;
+                /* 确保居中 */
             }
 
             .sidebar h1 {
                 font-size: 1.5rem;
+                margin-top: 10px;
             }
 
             .resume-button {
                 padding: 8px;
                 font-size: 0.8rem;
+                margin-top: 10px;
             }
 
             section h2 {
                 font-size: 1.2rem;
+            }
+
+            .sidebar .contact p {
+                font-size: 0.8rem;
+                /* 调整文字大小 */
             }
         }
     </style>
@@ -224,7 +237,7 @@
                     <li><strong>Bachelor in Computer Science</strong>, University of Kansas (2019 – 2023)</li>
                 </ul>
             </section>
-            
+
             <section>
                 <h2>Publications</h2>
                 <ul>
